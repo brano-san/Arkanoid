@@ -7,6 +7,9 @@ using Arcanoid.Contracts.Models;
 
 namespace Arkanoid
 {
+    /// <summary>
+    /// Основная форма приложения
+    /// </summary>
     public partial class MainForm : Form
     {
         private Ball ball;
@@ -32,6 +35,9 @@ namespace Arkanoid
         private readonly Keys moveLeftKey = Keys.Left;
         private readonly Keys moveRightKey = Keys.Right;
 
+        /// <summary>
+        /// Инициализирует параметры окна игры и запускает игру.
+        /// </summary>
         public MainForm()
         {
             Width = 440;

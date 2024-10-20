@@ -5,11 +5,14 @@ using System.Collections.Generic;
 
 namespace Arkanoid
 {
+    /// <summary>
+    /// Физика управления игрой. <see cref="Ball"/>. <see cref="Platform"/>. <see cref="Block"/>.
+    /// </summary>
     public class GamePhysics
     {
-        private Ball ball;
-        private Platform platform;
-        private List<IGameObject> blocks;
+        private readonly Ball ball;
+        private readonly Platform platform;
+        private readonly List<IGameObject> blocks;
 
         public GamePhysics(Ball ball, Platform platform, List<IGameObject> blocks)
         {
@@ -18,6 +21,9 @@ namespace Arkanoid
             this.blocks = blocks;
         }
 
+        /// <summary>
+        /// Обновление <see cref="IGameObject.Bounds"/> для объектов игры <see cref="IGameObject"/>
+        /// </summary>
         public void Update()
         {
             ball.UpdatePosition();
