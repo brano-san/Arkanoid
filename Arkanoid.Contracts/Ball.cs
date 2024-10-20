@@ -3,37 +3,52 @@ using Arcanoid.Contracts.Models;
 
 namespace Arcanoid.Contracts
 {
+    /// <summary>
+    /// Объект игры мяч <see cref="IGameObject"/>
+    /// </summary>
     public class Ball : IGameObject
     {
+        /// <inheritdoc cref="IGameObject.Bounds"/>
         public Rectangle Bounds { get; private set; }
-        public int SpeedX { get; set; }
-        public int SpeedY { get; set; }
+
+        private int speedX;
+        private int speedY;
 
         public Ball(int x, int y, int width, int height, int speedX, int speedY)
         {
             Bounds = new Rectangle(x, y, width, height);
-            SpeedX = speedX;
-            SpeedY = speedY;
+            this.speedX = speedX;
+            this.speedY = speedY;
         }
 
+        /// <inheritdoc cref="IGameObject.Move"/>
         public void Move(int deltaX, int deltaY)
         {
             Bounds = new Rectangle(Bounds.X + deltaX, Bounds.Y + deltaY, Bounds.Width, Bounds.Height);
         }
 
+        /// <summary>
+        /// Обновить позицию мяча <see cref="Bounds"/>
+        /// </summary>
         public void UpdatePosition()
         {
-            Move(SpeedX, SpeedY);
+            Move(speedX, speedY);
         }
 
+        /// <summary>
+        /// Отразить движение по оси X <see cref="Bounds"/>
+        /// </summary>
         public void ReflectX()
         {
-            SpeedX = -SpeedX;
+            speedX = -speedX;
         }
 
+        /// <summary>
+        /// Отразить движение по оси Y <see cref="Bounds"/>
+        /// </summary>
         public void ReflectY()
         {
-            SpeedY = -SpeedY;
+            speedY = -speedY;
         }
     }
 }

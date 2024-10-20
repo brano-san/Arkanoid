@@ -66,6 +66,9 @@ namespace Arkanoid
             }
         }
 
+        /// <summary>
+        /// Отрисовка объектов игры <see cref="IGameObject"/>
+        /// </summary>
         public void Render()
         {
             ballPictureBox.Left = ball.Bounds.Left;
