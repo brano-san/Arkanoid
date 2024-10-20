@@ -1,7 +1,7 @@
-﻿using Arcanoid.Contracts;
-using Arcanoid.Src.Objects;
+﻿using System.Linq;
+using Arcanoid.Contracts;
+using Arcanoid.Contracts.Models;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Arkanoid
 {

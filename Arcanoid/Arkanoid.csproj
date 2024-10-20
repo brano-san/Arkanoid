@@ -46,33 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IGameObject.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Src\GamePhysics.cs" />
-    <Compile Include="Src\GameRenderer.cs" />
-    <Compile Include="Src\Objects\Ball.cs" />
-    <Compile Include="Src\Objects\Block.cs" />
-    <Compile Include="Src\Objects\Platform.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,22 +80,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\ball.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\block_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\block_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\block_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\block_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\platform.png" />
+    <ProjectReference Include="..\Arkanoid.Contracts\Arkanoid.Contracts.csproj">
+      <Project>{4151e1e2-0cca-45c5-9ee8-7db84daff973}</Project>
+      <Name>Arkanoid.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Arkanoid.Logic\Arkanoid.Logic.csproj">
+      <Project>{5fa2fc19-3494-426d-bdd2-a8d3b6d77b04}</Project>
+      <Name>Arkanoid.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Arkanoid.Renderer\Arkanoid.Renderer.csproj">
+      <Project>{46671226-c648-49ed-be5d-ab13129af705}</Project>
+      <Name>Arkanoid.Renderer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

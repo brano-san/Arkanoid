@@ -1,7 +1,7 @@
-﻿using Arcanoid.Contracts;
-using System.Drawing;
+﻿using System.Drawing;
+using Arcanoid.Contracts.Models;
 
-namespace Arcanoid.Src.Objects
+namespace Arcanoid.Contracts
 {
     public class Platform : IGameObject
     {

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using Arcanoid.Contracts;
+using Arcanoid.Contracts.Models;
 
-namespace Arcanoid.Src.Objects
+namespace Arcanoid.Contracts
 {
     public class Ball : IGameObject
     {

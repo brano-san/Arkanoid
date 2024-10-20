@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Arcanoid.Contracts
+namespace Arcanoid.Contracts.Models
 {
     public interface IGameObject
     {

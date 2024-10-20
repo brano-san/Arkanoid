@@ -1,10 +1,9 @@
-﻿using System;
+﻿using System.Drawing;
 using Arcanoid.Contracts;
-using Arcanoid.Src.Objects;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using Arcanoid.Properties;
+using Arcanoid.Contracts.Models;
+using System.Collections.Generic;
+using Arkanoid.Renderer.Properties;
 
 namespace Arkanoid
 {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Arcanoid.Contracts;
-using Arcanoid.Src.Objects;
+using Arcanoid.Contracts.Models;
 
 namespace Arkanoid
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private Ball ball;
         private Platform platform;
@@ -29,11 +29,18 @@ namespace Arkanoid
         private readonly int ballHeight = 20;
         private readonly int ballSpeed = 3;
 
-        public Form1()
+        private readonly Keys moveLeftKey = Keys.Left;
+        private readonly Keys moveRightKey = Keys.Right;
+
+        public MainForm()
         {
             Width = 440;
             Height = 540;
             BackColor = Color.Black;
+            Text = "Arkanoid";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
 
             InitializeGame();
         }
@@ -73,11 +80,11 @@ namespace Arkanoid
 
         private void ArkanoidForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left && platform.Bounds.Left > 0)
+            if (e.KeyCode == moveLeftKey && platform.Bounds.Left > 0)
             {
                 platform.MoveLeft();
             }
-            else if (e.KeyCode == Keys.Right && platform.Bounds.Right < ClientSize.Width)
+            else if (e.KeyCode == moveRightKey && platform.Bounds.Right < ClientSize.Width)
             {
                 platform.MoveRight();
             }

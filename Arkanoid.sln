@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcanoid", "Arcanoid\Arcanoid.csproj", "{55CF7463-4171-4418-AA31-75DDA0B2E272}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkanoid", "Arcanoid\Arkanoid.csproj", "{55CF7463-4171-4418-AA31-75DDA0B2E272}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkanoid.Contracts", "Arkanoid.Contracts\Arkanoid.Contracts.csproj", "{4151E1E2-0CCA-45C5-9EE8-7DB84DAFF973}"
 EndProject
