@@ -46,14 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IGameObject.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Src\GamePhysics.cs" />
+    <Compile Include="Src\GameRenderer.cs" />
+    <Compile Include="Src\Objects\Ball.cs" />
+    <Compile Include="Src\Objects\Block.cs" />
+    <Compile Include="Src\Objects\Platform.cs" />
     <Compile Include="Src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -76,6 +86,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Images\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\block_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\block_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\block_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\block_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\platform.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
